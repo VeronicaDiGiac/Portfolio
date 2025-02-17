@@ -1,0 +1,168 @@
+@import url("style.css");
+
+.skills {
+  text-align: center;
+  padding: 100px 10%;
+  background-color: #1f242d;
+}
+
+.skills h1 {
+  font-size: 50px;
+  color: #39f;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+  animation: fadeInGrid 1s ease-in-out;
+}
+
+/* Regole generali per tutti gli skills-item */
+.skills-item1,
+.skills-item2,
+.skills-item3,
+.skills-item4,
+.skills-item5 {
+  position: relative;
+  background-color: #2a2e3b;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* Immagine di sfondo per ogni skills-item */
+.skills-item1::after {
+  background-image: url("../img/moneky1-Photoroom-Photoroom.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.skills-item2::after {
+  background-image: url("../img/moneky2-Photoroom-Photoroom.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.skills-item3::after {
+  background-image: url("../img/moneky3-Photoroom-Photoroom.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.skills-item4::after {
+  background-image: url("../img/moneky4-Photoroom-Photoroom.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.skills-item5::after {
+  background-image: url("../img/moneky5-Photoroom-Photoroom.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+/* Stile del pseudo-elemento ::after */
+.skills-item1::after,
+.skills-item2::after,
+.skills-item3::after,
+.skills-item4::after,
+.skills-item5::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+/* Effetto hover sul pseudo-elemento ::after */
+.skills-item1:hover::after,
+.skills-item2:hover::after,
+.skills-item3:hover::after,
+.skills-item4:hover::after,
+.skills-item5:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Oscura il testo durante l'hover */
+.skills-item1:hover h2,
+.skills-item2:hover h2,
+.skills-item3:hover h2,
+.skills-item4:hover h2,
+.skills-item5:hover h2,
+.skills-item1:hover ul,
+.skills-item2:hover ul,
+.skills-item3:hover ul,
+.skills-item4:hover ul,
+.skills-item5:hover ul {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Stile della lista */
+.skills-item1 ul,
+.skills-item2 ul,
+.skills-item3 ul,
+.skills-item4 ul,
+.skills-item5 ul {
+  list-style: none;
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Stile degli elementi della lista */
+.skills-item1 ul li,
+.skills-item2 ul li,
+.skills-item3 ul li,
+.skills-item4 ul li,
+.skills-item5 ul li {
+  margin: 8px 0;
+  transition: color 0.3s ease;
+}
+
+/* Effetto hover sugli elementi della lista */
+.skills-item1 ul li:hover,
+.skills-item2 ul li:hover,
+.skills-item3 ul li:hover,
+.skills-item4 ul li:hover,
+.skills-item5 ul li:hover {
+  color: #39f;
+  font-weight: bold;
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInGrid {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

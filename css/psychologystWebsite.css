@@ -1,0 +1,57 @@
+@import url("style.css");
+
+/* Sezione di dettaglio del progetto */
+.project-detail {
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.project-detail h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #39f;
+}
+
+.project-detail p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  color: #ccc;
+}
+
+/* Galleria di immagini */
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.image-gallery img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Link per visionare il sito web */
+.visit-website {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #39f;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.visit-website:hover {
+  background-color: #0077cc;
+}

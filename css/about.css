@@ -1,0 +1,86 @@
+@import url("style.css");
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animazione del testo */
+.about-content {
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.about-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #39f;
+  padding: 5px;
+  margin: 5px;
+}
+
+.about-content p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Animazione dell'immagine */
+.about-img {
+  opacity: 0;
+  animation: fadeInRight 1s ease-in-out forwards;
+}
+
+.about-img img {
+  width: 400px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #39f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effetto hover sull'immagine */
+.about-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #39f;
+}
+
+/* Animazioni con keyframes */
+
+/* Effetto fade-in generico */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Testo entra da sinistra */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Immagine entra da destra */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

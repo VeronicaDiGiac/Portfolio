@@ -1,0 +1,137 @@
+@import url("style.css");
+
+.portfolio {
+  text-align: center;
+  padding: 100px 10%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animazione del titolo */
+.portfolio h1 {
+  font-size: 50px;
+  color: #39f;
+  margin-bottom: 40px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Griglia per i progetti */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInGrid 1s ease-in-out forwards;
+}
+
+/* Singolo progetto */
+.project {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInProject 1s ease-in-out forwards;
+}
+
+.project img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(57, 159, 249, 0.6);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Effetto hover sulle immagini */
+.project img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(57, 159, 249, 0.8);
+}
+
+/* Titolo del progetto */
+.project h3 {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeInText 1s ease-in-out forwards;
+}
+/* Stile per i link dei progetti */
+.project-link {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 5px;
+
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #39f; /* Cambia colore al passaggio del mouse */
+}
+/* ANIMAZIONI */
+
+/* Fade-in generale */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Titolo appare dal basso */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Effetto fade-in per la griglia */
+@keyframes fadeInGrid {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Singolo progetto appare con scorrimento */
+@keyframes fadeInProject {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Testo del progetto appare con dissolvenza */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

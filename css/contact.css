@@ -1,0 +1,33 @@
+@import url("style.css");
+
+.contact {
+  text-align: center;
+  padding: 100px 10%;
+}
+
+.contact h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: #39f;
+}
+
+.contact p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.contact p a {
+  color: #39f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.contact p a:hover {
+  color: #ccc;
+}
+
+.contact i {
+  font-size: 20px;
+  margin-right: 5px;
+}
